@@ -1,0 +1,208 @@
+/* Fonte Elegante */
+.rouge-script-regular {
+  font-family: "Rouge Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #fffafa;
+    color: #444;
+    overflow-x: hidden;
+}
+
+.site-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Cabeçalho Gigante */
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 8rem;
+    color: #d81b60;
+    margin: 0;
+    line-height: 1;
+}
+
+.hero p {
+    color: #888;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.carrossel-container {
+    flex: 1.2;
+    min-width: 350px;
+    height: 550px;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(216, 27, 96, 0.15);
+    background: #f0f0f0;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+.controles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.btn-nav {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    color: #d81b60;
+    pointer-events: auto;
+}
+
+/* Carta */
+.carta-amor {
+    flex: 1;
+    min-width: 350px;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+    border-left: 10px solid #ffb6c1;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.carta-amor h2 {
+    font-size: 4.5rem;
+    color: #d81b60;
+    margin-bottom: 20px;
+}
+
+.texto-carta p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.carta-amor strong {
+    font-size: 3.5rem;
+    color: #d81b60;
+}
+
+/* Música */
+.musica-container {
+    background: #fff0f5;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.1);
+}
+
+.musica-container p {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: #d81b60;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+    filter: sepia(20%) saturate(70%) hue-rotate(300deg);
+}
+
+/* Contador */
+.contador-container {
+    text-align: center;
+    background: #d81b60;
+    color: white;
+    padding: 60px 20px;
+    border-radius: 40px;
+    margin-bottom: 60px;
+}
+
+.tempo-texto {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 2rem;
+}
+
+.tempo-texto strong {
+    font-size: 4.5rem;
+    display: block;
+    margin: 15px 0;
+}
+
+/* Qualidades */
+.qualidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.card-qualidade {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #d81b60;
+    font-size: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* Rodapé e Corações */
+footer {
+    text-align: center;
+    padding: 60px;
+    font-size: 1.4rem;
+    color: #aaa;
+}
+
+.coracao-clique {
+    position: fixed;
+    pointer-events: none;
+    animation: subir 1.5s linear forwards;
+    font-size: 24px;
+    z-index: 9999;
+}
+
+@keyframes subir {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -150px) scale(2); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 4.5rem; }
+    .hero p { font-size: 1.4rem; }
+}
